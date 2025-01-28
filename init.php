@@ -25,7 +25,8 @@ function plugin_init_otpauth() {
    }
    
    // Add OTP configuration menu
-   $PLUGIN_HOOKS['config_page']['otpauth'] = 'front/config.php';
+   Plugin::registerClass('PluginOtpauthConfig');
+   $PLUGIN_HOOKS['config_page']['otpauth'] = 'front/config.form.php';
    
    // Add OTP verification hook during login
    $PLUGIN_HOOKS['pre_login_authenticated']['otpauth'] = 'plugin_otpauth_check_otp';

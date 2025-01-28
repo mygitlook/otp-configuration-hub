@@ -21,9 +21,11 @@ function plugin_version_otpauth() {
             'max' => '11.0.0',
          ],
          'php'    => [
-            'min' => '7.4.0'
+            'min' => '7.4.0',
+            'max' => '8.3.0'
          ]
-      ]
+      ],
+      'minGlpiVersion' => '10.0.0'
    ];
 }
 
