@@ -3,6 +3,10 @@
  * Plugin setup information
  */
 
+if (!defined('PLUGIN_OTPAUTH_VERSION')) {
+   die("Please initialize the plugin first");
+}
+
 /**
  * Define plugin's configuration
  *
@@ -11,7 +15,7 @@
 function plugin_version_otpauth() {
    return [
       'name'           => 'OTP Authentication',
-      'version'        => OTP_AUTH_VERSION,
+      'version'        => PLUGIN_OTPAUTH_VERSION,
       'author'         => 'Your Name',
       'license'        => 'GPLv3+',
       'homepage'       => 'https://github.com/yourusername/glpi-otpauth',

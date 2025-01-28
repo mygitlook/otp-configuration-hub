@@ -3,7 +3,7 @@
  * Init the OTP Authentication plugin.
  */
 
-define('OTP_AUTH_VERSION', '1.0.0');
+define('PLUGIN_OTPAUTH_VERSION', '1.0.0');
 
 // Check if GLPI is initialized
 if (!defined('GLPI_ROOT')) {
