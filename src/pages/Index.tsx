@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import {
   InputOTP,
   InputOTPGroup,
@@ -48,8 +48,12 @@ const Index = () => {
             maxLength={6}
             render={({ slots }) => (
               <InputOTPGroup className="gap-2 flex justify-center">
-                {slots.map((slot, index) => (
-                  <InputOTPSlot key={index} index={index} {...slot} />
+                {slots.map((slot, idx) => (
+                  <InputOTPSlot
+                    key={idx}
+                    {...slot}
+                    index={idx}
+                  />
                 ))}
               </InputOTPGroup>
             )}
